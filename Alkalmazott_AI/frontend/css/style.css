@@ -1,28 +1,122 @@
-body {
-    font-family: Arial, sans-serif;
+/* Alap stílusok */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
     color: #333;
-}
-
-#app {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
 }
 
-label {
-    font-weight: bold;
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-#questionArea {
-    margin-top: 20px;
+/* Fejléc */
+header h1 {
+    color: #3498db;
+    /* Kék szín */
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/* Chatbox stílus */
+.chat-box {
+    margin-top: 30px;
+    background: linear-gradient(145deg, #3498db, #2ecc71);
+    /* Kék és zöld színátmenet */
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Üzenet stílusok */
+.message {
+    margin-bottom: 15px;
+}
+
+.user-message {
+    color: #fff;
+    background-color: #3498db;
+    /* Kék üzenet */
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-left: auto;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bot-message {
+    color: #333;
+    background-color: #bdc3c7;
+    /* Ezüst üzenet */
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-right: auto;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input mező és gomb */
+.input-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3498db;
+    /* Kék szegély */
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#user-input:focus {
+    border-color: #2ecc71;
+    /* Zöld szegély, ha fókuszálva van */
+}
+
+button {
+    background-color: #3498db;
+    /* Kék gomb */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* Sötétebb kék hover állapot */
 }
